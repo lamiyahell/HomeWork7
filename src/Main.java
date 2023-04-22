@@ -23,13 +23,13 @@ public class Main {
         }
     }
 
-    public static void printDistance (int deliveryDistance) {
-        int days = -1;
-        if (deliveryDistance <= 20) {
+    public static int printDeliveryDays (int distance) {
+        int days = 0;
+        if (distance <= 20) {
             days = 1;
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+        } else if (distance > 20 && distance <= 60) {
             days = 2;
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+        } else if (distance > 60 && distance <= 100) {
             days = 3;
         }
         if (days > 0) {
@@ -37,6 +37,7 @@ public class Main {
         } else {
             System.out.println("Доставка не осуществляется");
         }
+        return days;
     }
     public static void main(String[] args) {
         task1();
@@ -57,7 +58,7 @@ public class Main {
 
 
     public static void task3() {
-        int deliveryDistance = 75;
-        printDistance(deliveryDistance);
+        int deliveryDistance = 35;
+        printDeliveryDays(deliveryDistance);
     }
 }
